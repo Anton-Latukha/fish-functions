@@ -1,3 +1,3 @@
 function dcup
-    docker-compose up
+  docker-compose up
 end

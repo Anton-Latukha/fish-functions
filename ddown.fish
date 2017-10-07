@@ -1,3 +1,3 @@
 function ddown
-    docker-compose down
+  docker-compose down
 end

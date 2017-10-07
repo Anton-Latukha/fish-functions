@@ -1,3 +1,3 @@
 function ddisable
-    systemctl disable docker
+  systemctl disable docker
 end

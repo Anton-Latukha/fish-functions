@@ -1,3 +1,3 @@
 function dstop
-    systemctl stop docker
+  systemctl stop docker
 end

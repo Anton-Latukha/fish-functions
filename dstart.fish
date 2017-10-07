@@ -1,3 +1,3 @@
 function dstart
-    systemctl start docker
+  systemctl start docker
 end

@@ -1,3 +1,3 @@
 function denable
-    systemctl enable docker
+  systemctl enable docker
 end
