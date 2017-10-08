@@ -14,6 +14,6 @@ function man
   set -xU LESS_TERMCAP_ZO (tput ssupm)
   set -xU LESS_TERMCAP_ZW (tput rsupm)
 
-  (which man) $agrv
+  command man $argv
 
 end

@@ -14,6 +14,6 @@ function less
   set -xU LESS_TERMCAP_ZO (tput ssupm)
   set -xU LESS_TERMCAP_ZW (tput rsupm)
 
-  (which less) $agrv
+  command less $agrv
 
 end
