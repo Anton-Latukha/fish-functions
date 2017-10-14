@@ -1,3 +1,3 @@
 function r
-  sudo (which fish)
+  sudo (command -s fish)
 end
