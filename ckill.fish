@@ -1,46 +1,17 @@
 function ckill
 
-  echo 'Checking if pid '$argv' exists'
-  kill -0 $argv
-  if test $status -eq 0
-    echo '-1 pid '$argv
-    kill -1 $argv
-    sleep 15
-  end
+    # Send signals in the line of strictness and damage to the process
+    set posixSignal 1 15 2 9
 
-  kill -0 $argv
-  if test $status -ne 0
-    echo 'pid '$argv' not present'
-  end
+    for sign in $posixSignal
 
-  kill -0 $argv
-  if test $status -eq 0
-    echo '-15 pid '$argv
-    kill -15 $argv
-    sleep 15
-  end
+        kill -0 $argv
+        if test $status -eq 0
+            echo "Sending -$sign SIGN to $argv PID"
+            kill -1 $argv
+            sleep 15
+        end
 
-  kill -0 $argv
-  if test $status -ne 0
-    echo 'pid '$argv' not present'
-  end
-
-  kill -0 $argv
-  if test $status -eq 0
-    echo '-2 pid '$argv
-    kill -2 $argv
-    sleep 15
-  end
-
-  kill -0 $argv
-  if test $status -ne 0
-    echo 'pid '$argv' not present'
-  end
-
-  kill -0 $argv
-  if test $status -eq 0
-    echo '-9 pid '$argv
-    kill -9 $argv
-  end
+    end
 
 end
