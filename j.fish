@@ -1,3 +1,5 @@
 function j
-    sudo journalctl $argv
+
+  sudo journalctl $argv
+
 end

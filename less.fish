@@ -1,4 +1,5 @@
 function less
+
   # Colors for Man Pages
   set -xU LESS_TERMCAP_mb (tput blink)              # begin blinking mode
   set -xU LESS_TERMCAP_md (tput setaf 3)            # begin bold mode (yellow)
