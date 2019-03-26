@@ -9,9 +9,9 @@ CHECK_COM_PARAMS () {
         >&2 echo 'Command line contains' "$1" 'arguments, this script works only with one path. Use xargs if you want to invoke it for multiple'
         exit 3
     fi
-    
+
     if [ "$1" -eq 0 ]; then # If there are zero arguments
-        ASK_CONFIRMATION "Command line contains no arguments, then run it for current path: '""$PWD""'? [y/N] " 'return 0' 'EXIT'
+        ASK_CONFIRMATION "Command line contains no arguments, then run it for current path: '""$PWD""'? [y/N] " ' ' 'EXIT'
     fi
 
 }
@@ -41,15 +41,15 @@ PRINT_EMPTY_FOLDERS () {
 
     find "$1" -type d -empty -print
 
-    ASK_CONFIRMATION 'Do you want to delete folders above?  [y/N] ' 'return 0' 'EXIT'
+    ASK_CONFIRMATION 'Do you want to delete folders above?  [y/N] ' ' ' 'EXIT'
 
 }
 
 DELETE_EMPTY_FOLDERS () {
-    
+
     find "$1" -type d -empty -delete
     echo 'All empty folders deleted.'
-    
+
 }
 
 EXIT () {
