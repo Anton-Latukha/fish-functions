@@ -1,5 +1,5 @@
 function e
 
-  emacsclient -c -t $argv
+  emacsclient --alternate-editor=nvim $argv
 
 end
