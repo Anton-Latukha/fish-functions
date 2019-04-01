@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SITE_DIRECTORY='/mnt/vault/important/Personal/Technical/Git/my/mkdocs-blog'
+SITE_DIRECTORY='/home/pyro/src/mkdocs-blog'
 
 
 # Error codes:
@@ -10,7 +10,7 @@ confirm() {
   # call with a prompt string or use a default
   read -r "${1:-Are you sure?} [y/N] : " response
   case "$response" in
-    [yY][eE][sS]|[yY]) 
+    [yY][eE][sS]|[yY])
       true
         ;;
         *)
@@ -20,7 +20,7 @@ confirm() {
 }
 
 
-cd /mnt/vault/important/Personal/Technical/Git/my/mkdocs-blog || exit "$ERR_NO_FOLDER"
+cd "$SITE_DIRECTORY" || exit "$ERR_NO_FOLDER"
 git status
 
 ASK_response=''
