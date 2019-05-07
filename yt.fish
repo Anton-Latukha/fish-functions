@@ -1,5 +1,5 @@
 function yt
 
-  youtube-dl $argv
+  youtube-dl --add-metadata --mark-watched $argv
 
 end
