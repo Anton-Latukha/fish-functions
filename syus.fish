@@ -1,4 +1,4 @@
-function sustatus
+function syus
 
   systemctl --user status
 
