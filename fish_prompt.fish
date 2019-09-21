@@ -1,18 +1,4 @@
 function fish_prompt
-
-  ## Hook Wakatime to the terminal
-
-  set -l project
-
-  if echo (pwd) | grep -qEi '^/home/'"$USER"'/'
-    set  project (echo (pwd) | sed 's#^/home/'"$USER"'/\\([^/]*\\).*#\\1#')
-  else
-    set  project "Terminal"
-  end
-
-  wakatime --write --plugin 'fish-wakatime/0.0.1' --entity-type 'app' --project "$project" --entity (echo $history[1] | cut -d ' ' -f1) 2>&1 > /dev/null&
-
-
   set -l last_command_status $status
   set -l cwd
 
