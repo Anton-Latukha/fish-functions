@@ -1,6 +1,7 @@
 function fish_prompt
   set -l 'last_command_status' "$status"
   set -l 'cwd'
+  set -l 'directory_color'
   set 'dirClrR' (set_color "$fish_color_error" ^ '/dev/null' || set_color 'red')
   set 'dirClrU' (set_color "$fish_color_cwd" ^ '/dev/null' || set_color 'green')
   set 'repository_color' (set_color "$fish_color_quote" ^ '/dev/null'; or set_color 'brown')
@@ -11,7 +12,6 @@ function fish_prompt
   else
     set cwd (prompt_pwd)
   end
-  set -l directory_color
 
   if test $USER = 'root'
     set 'directory_color' "$dirClrR"
