@@ -6,6 +6,7 @@ function fish_prompt
   set 'dirClrU' (set_color "$fish_color_cwd" ^ '/dev/null' || set_color 'green')
   set 'repository_color' (set_color "$fish_color_quote" ^ '/dev/null'; or set_color 'brown')
 
+  rWakatime
   if test "$theme_short_path" = 'yes'
     set cwd (basename (prompt_pwd))
   else
