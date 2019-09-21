@@ -1,6 +1,7 @@
 function fish_prompt
   set -l 'lastTermStatus' "$status"
   set -l 'cwd'
+  rWakatime
   set 'cwd' (prompt_pwd)
   if test "$USER" = 'root'
     set 'directory_color' "$dirClrR"
