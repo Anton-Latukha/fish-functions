@@ -11,18 +11,6 @@ function fish_prompt
   else
     set cwd (prompt_pwd)
   end
-
-  set -l fish     ">"
-  set -l ahead    "↑"
-  set -l behind   "↓"
-  set -l diverged "⥄ "
-  set -l dirty    "⨯"
-  set -l none     "◦"
-
-  set -l normal_color     (set_color normal)
-  set -l success_color    (set_color $fish_pager_color_progress ^/dev/null; or set_color cyan)
-  set -l error_color      (set_color $fish_color_error ^/dev/null; or set_color red --bold)
-
   set -l directory_color
 
   if test $USER = 'root'
