@@ -1,7 +1,6 @@
 function fish_prompt
-  set -l last_command_status $status
-  set -l cwd
-
+  set -l 'last_command_status' "$status"
+  set -l 'cwd'
   set 'dirClrR' (set_color "$fish_color_error" ^ '/dev/null' || set_color 'red')
   set 'dirClrU' (set_color "$fish_color_cwd" ^ '/dev/null' || set_color 'green')
   set 'repository_color' (set_color "$fish_color_quote" ^ '/dev/null'; or set_color 'brown')
@@ -32,12 +31,6 @@ function fish_prompt
     set 'directory_color' "$dirClrU"
   end
   if git_is_repo
-    if test "$theme_short_path" = 'yes'
-      set root_folder (command git rev-parse --show-toplevel ^/dev/null)
-      set parent_root_folder (dirname $root_folder)
-      set cwd (echo $PWD | sed -e "s|$parent_root_folder/||")
-      echo -n -s $directory_color $cwd $normal_color
-    end
 
     echo -n -s $directory_color $cwd $normal_color
 
