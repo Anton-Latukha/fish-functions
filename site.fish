@@ -3,6 +3,7 @@ function site
   set haskellNotes "$HOME"/org/haskell
   set mkdocsBlog "$HOME"/src/mkdocs-blog
   set mkdocsTheme "$mkdocsBlog"/mkdocs-material
+  set htmlBlog "$mkdocsBlog"/Anton-Latukha.github.io
 
   cd "$mkdocsTheme"
   git checkout master
