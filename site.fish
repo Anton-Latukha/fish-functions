@@ -24,4 +24,8 @@ function site
   git add "$mkdocsBlog"/docs/haskell-notes.html
   git commit -m "Haskell notes: upd"
   git status
+  cd "$htmlBlog"
+  git add "$htmlBlog"/haskell-notes.html "$htmlBlog"/sitemap.xml "$htmlBlog"/sitemap.xml.gz
+  git commit -m "Haskell notes: upd"
+  git push
 end
