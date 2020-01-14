@@ -18,6 +18,5 @@ function site
   cp -r "$haskellNotes"/Good_code/ "$mkdocsBlog"/docs/
   cp "$haskellNotes"/README.html "$mkdocsBlog"/docs/haskell-notes.html
   docker run --rm -it -p 8000:8000 -v (pwd):/docs mkdocs-material build
-  docker run --rm -it -p 8000:8000 -v (pwd):/docs mkdocs-material
 
 end
