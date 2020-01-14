@@ -28,4 +28,10 @@ function site
   git add "$htmlBlog"/haskell-notes.html "$htmlBlog"/sitemap.xml "$htmlBlog"/sitemap.xml.gz
   git commit -m "Haskell notes: upd"
   git push
+  git status
+  cd "$mkdocsBlog"
+  git add Anton-Latukha.github.io
+  git commit -m "Meta: site smod: Haskell notes: upd"
+  git push
+
 end
