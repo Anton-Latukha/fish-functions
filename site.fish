@@ -11,7 +11,7 @@ function site
   git rebase master
   docker build -t mkdocs-material .
   cd "$mkdocsBlog"
-  rm "$mkdocsBlog"/docs/haskell-nontes.html
+  rm "$mkdocsBlog"/docs/haskell-notes.html
   cp -r "$haskellNotes"/Book/ "$mkdocsBlog"/docs/
   cp -r "$haskellNotes"/Good_code/ "$mkdocsBlog"/docs/
   cp "$haskellNotes"/README.html "$mkdocsBlog"/docs/haskell-notes.html
