@@ -19,4 +19,6 @@ function site
   cp "$haskellNotes"/README.html "$mkdocsBlog"/docs/haskell-notes.html
   docker run --rm -it -p 8000:8000 -v (pwd):/docs mkdocs-material build
 
+  git add "$mkdocsTheme"
+  git commit -m "Meta: upd smod mkdocs-material theme"
 end
