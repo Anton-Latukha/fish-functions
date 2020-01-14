@@ -2,8 +2,9 @@ function site
 
   set haskellNotes "$HOME"/org/haskell
   set mkdocsBlog "$HOME"/src/mkdocs-blog
+  set mkdocsTheme "$mkdocsBlog"/mkdocs-material
 
-  cd "$mkdocsBlog"/mkdocs-material
+  cd "$mkdocsTheme"
   git checkout master
   git pull u master
   git push f master
