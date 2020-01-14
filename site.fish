@@ -21,4 +21,7 @@ function site
 
   git add "$mkdocsTheme"
   git commit -m "Meta: upd smod mkdocs-material theme"
+  git add "$mkdocsBlog"/docs/haskell-notes.html
+  git commit -m "Haskell notes: upd"
+  git status
 end
