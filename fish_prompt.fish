@@ -19,7 +19,7 @@ function fish_prompt
       echo -n -s (git_ahead "$ahead" "$behind" "$diverged" "$none")
     end
   else
-    echo -n -s "$directory_color" "$cwd" "$normal_color"
+    echo -n -s "$is_nix_shell""$directory_color""$cwd"
   end
   if test "$lastTermStatus" -eq '0'
     echo -n -s "$fishNrm"
