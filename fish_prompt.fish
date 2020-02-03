@@ -8,6 +8,9 @@ function fish_prompt
   else
     set 'directory_color' "$dirClrU"
   end
+  if test "$IN_NIX_SHELL"
+    set 'is_nix_shell' "$repository_color"'Nix '
+  end
   if git_is_repo
     echo -n -s "$directory_color""$cwd""$normal_color"(set_color 'brgreen')':'"$repository_color"(git_branch_name)"$normal_color"
     if git_is_touched
