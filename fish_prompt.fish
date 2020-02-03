@@ -12,7 +12,7 @@ function fish_prompt
     set 'is_nix_shell' "$repository_color"'Nix '
   end
   if git_is_repo
-    echo -n -s "$directory_color""$cwd""$normal_color"(set_color 'brgreen')':'"$repository_color"(git_branch_name)"$normal_color"
+    echo -n -s "$is_nix_shell""$directory_color""$cwd""$bGreen"':'"$repository_color"(git_branch_name)"$normal_color"
     if git_is_touched
       echo -n -s "$dirty"
     else
