@@ -1,5 +1,5 @@
 function nix-shell
 
-  command nix-shell $argv --command "export SHELL="(command -v fish)"; fish"
+  command nix-shell --command "export SHELL="(command -v fish)"; fish" $argv
 
 end
