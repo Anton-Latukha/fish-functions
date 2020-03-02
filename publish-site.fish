@@ -1,4 +1,4 @@
-function site
+function publish-site
 
   set haskellNotes "$HOME"/org/haskell
   set mkdocsBlog "$HOME"/src/mkdocs-blog
