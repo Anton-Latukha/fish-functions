@@ -10,6 +10,7 @@ function publish-book
   git commit -m "Publish: upd TeX"
   git add "$bookFilenameTemplate".pdf
   git commit -m "Publish: upd PDF"
+  git push
 
   publish-site
 
