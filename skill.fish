@@ -1,7 +1,8 @@
 function skill
 
-  # Soft kill the process
-  # Send signals with increasing strictness and damage to the process
+# Soft kill the process
+# Send signals with increasing strictness and damage to the process
+
   set posixSignal 1 15 2 9
 
   for sign in $posixSignal
