@@ -1,5 +1,6 @@
-function ckill
+function skill
 
+  # Soft kill the process
   # Send signals with increasing strictness and damage to the process
   set posixSignal 1 15 2 9
 
