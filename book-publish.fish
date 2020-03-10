@@ -1,4 +1,4 @@
-function publish-book
+function book-publish
 
   set haskellNotes "$HOME"/org/haskell
   set bookFilenameTemplate "$haskellNotes"/README
@@ -12,6 +12,6 @@ function publish-book
   git commit -m "Publish: upd PDF"
   git push
 
-  publish-site
+  site-publish
 
 end
