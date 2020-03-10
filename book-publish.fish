@@ -14,4 +14,6 @@ function book-publish
 
   site-publish
 
+  book-finish
+
 end
