@@ -1,5 +1,5 @@
 function e
 
-  emacsclient --alternate-editor=nvim $argv
+  emacsclient -a 'systemctl --user start emacs.service'  $argv
 
 end
