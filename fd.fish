@@ -1,5 +1,5 @@
 function fd
 
-  fd -H $argv
+  command fd -H $argv
 
 end
