@@ -5,7 +5,6 @@ function book-finish
   set book "$bookFilenameTemplate".org
 
   ## HACK for Org-mode LaTeX preview
-
   sed -i -e '/^#+latex_header: \\\usepackage{unicode-math}.*$/d' \
          -e '/^#+latex_header: \\\unimathsetup{math-style=.*$/d' \
          -e '/^#+latex_header: \\\usepackage\[a-1b\]{pdfx}.*$/d' \
