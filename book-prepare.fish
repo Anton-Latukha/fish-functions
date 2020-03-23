@@ -7,9 +7,9 @@ function book-prepare
   # # Calculate the size of the last line in chars and remove that size of bytes from the end of the file; in-place erases last line
   # dd if=/dev/null of="$book" bs=1 seek=(math (stat --format=%s "$book") - (tail -n2 "$book" | wc -c))
 
-  sed -i '/^#+latex_header: \\\pagestyle{empty}$/d' "$bookFilenameTemplate".org
-  sed -i '/^#+latex_header: \\\usepackage{unicode-math}.*$/d' "$bookFilenameTemplate".org
-  sed -i '/^#+latex_header: \\\unimathsetup{math-style=.*$/d' "$bookFilenameTemplate".org
-  sed -i '/^#+latex_header: \\\usepackage\[a-1b\]{pdfx}.*$/d' "$bookFilenameTemplate".org
+  sed -i -e '/^#+latex_header: \\\pagestyle{empty}$/d' \
+         -e '/^#+latex_header: \\\usepackage{unicode-math}.*$/d' \
+         -e '/^#+latex_header: \\\unimathsetup{math-style=.*$/d' \
+            "$bookFilenameTemplate".org
 
 end
