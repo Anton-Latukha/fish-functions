@@ -10,6 +10,7 @@ function book-prepare
   sed -i -e '/^#+latex_header: \\\pagestyle{empty}$/d' \
          -e '/^#+latex_header: \\\usepackage{unicode-math}.*$/d' \
          -e '/^#+latex_header: \\\unimathsetup{math-style=.*$/d' \
+         -e '/^#+latex_header: \\\usepackage\[a-1b\]{pdfx}.*$/d' \
             "$bookFilenameTemplate".org
 
 end
