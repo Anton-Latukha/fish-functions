@@ -4,7 +4,7 @@ function book-finish
   set bookFilenameTemplate "$haskellNotes"/README
   set book "$bookFilenameTemplate".org
 
-  ## HACK for Org-mode LaTeX preview
+  ## HACK removing packages/confs for proper Org-mode LaTeX preview
   sed -i -e '/^#+latex_header: \\\usepackage{unicode-math}.*$/d' \
          -e '/^#+latex_header: \\\unimathsetup{math-style=.*$/d' \
          -e '/^#+latex_header: \\\usepackage\[a-1b\]{pdfx}.*$/d' \
