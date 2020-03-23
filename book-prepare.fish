@@ -8,5 +8,8 @@ function book-prepare
   # dd if=/dev/null of="$book" bs=1 seek=(math (stat --format=%s "$book") - (tail -n2 "$book" | wc -c))
 
   sed -i '/^#+latex_header: \\\pagestyle{empty}$/d' "$bookFilenameTemplate".org
+  sed -i '/^#+latex_header: \\\usepackage{unicode-math}.*$/d' "$bookFilenameTemplate".org
+  sed -i '/^#+latex_header: \\\unimathsetup{math-style=.*$/d' "$bookFilenameTemplate".org
+  sed -i '/^#+latex_header: \\\usepackage\[a-1b\]{pdfx}.*$/d' "$bookFilenameTemplate".org
 
 end
