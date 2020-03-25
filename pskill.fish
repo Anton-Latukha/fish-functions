@@ -5,12 +5,13 @@ function pskill
 
   set posixSignal 1 15 2 9
 
+  set procID (pgrep $argv)
   for sign in $posixSignal
 
-    pkill -0 $argv
+    kill -0 $procID
     if test $status -eq 0
-      echo "Sending -$sign SIGN to process $argv"
-      pkill -1 $argv
+      echo "Sending -$sign SIGN to process $argv (PID $procID)"
+      kill -$posixSignal $procID
       sleep 15
     end
 
