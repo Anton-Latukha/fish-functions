@@ -5,7 +5,7 @@ function pskill
 
   set posixSignal 1 15 2 9
 
-  set procID (pgrep --uid (command id -u) $argv)
+  set procID (pgrep $argv)
   # set procID (pgrep --uid (command id -u) $argv)    # Grep processes only current to UID
   for sign in $posixSignal
 
