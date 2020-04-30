@@ -1,4 +1,4 @@
-function xgrab
+function xcast
 
   # Use `arecord -L` to see devices
   # Allows longer buffer queues
