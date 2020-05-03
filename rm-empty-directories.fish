@@ -1,5 +1,6 @@
 function rm-empty-directories
 
-  command sh ~/.config/fish/functions/rm-empty-folders.sh $argv
+  # Delete all empty files that are directories
+  fd --type d --type e --absolute-path $argv --exec-batch rmdir {}
 
 end
