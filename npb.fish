@@ -1,5 +1,5 @@
 function npb
 
-  nix-build "$NP" $argv
+  nix-build --no-out-link "$NP" $argv
 
 end
