@@ -1,5 +1,5 @@
 function cbr
 
-  cabal v2-run
+  cabal v2-run $argv
 
 end
