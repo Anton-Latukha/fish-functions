@@ -8,7 +8,7 @@ function nix-build
   set -l tmpFile (mktemp)
   echo "Log file: $tmpFile"
 
-  set -l numOfLines 1
+  set -l numOfLines "1"
 
   if command nix-build $argv &> "$tmpFile"
     echo "Build succesfull!"
