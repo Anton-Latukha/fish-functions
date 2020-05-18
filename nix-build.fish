@@ -11,7 +11,7 @@ function nix-build
   set -l numOfLines "1"
 
   if command nix-build $argv &> "$tmpFile"
-    echo "Build succesfull!"
+    echo "Build successfull!"
     tail -n"$numOfLines" "$tmpFile"
   else
     cat "$tmpFile"
