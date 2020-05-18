@@ -12,8 +12,10 @@ function nix-build
 
   if command nix-build $argv &> "$tmpFile"
     tail -n"$numOfLines" "$tmpFile"
+    rm "$tmpFile"
   else
     cat "$tmpFile"
+    rm "$tmpFile"
     exit 1
   end
 
