@@ -6,7 +6,7 @@ function nix-build
 # else - print the log into the terminal
 
   set -l tmpFile (mktemp)
-  echo "Log file: $tmpFile"
+  echo "Log: $tmpFile"
 
   set -l numOfLines "1"
 
