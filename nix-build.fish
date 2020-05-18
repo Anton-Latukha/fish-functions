@@ -15,6 +15,7 @@ function nix-build
     tail -n"$numOfLines" "$tmpFile"
   else
     cat "$tmpFile"
+    exit 1
   end
 
 end
