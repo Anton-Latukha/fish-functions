@@ -1,4 +1,4 @@
-funtion i
+function i
 
   # Like in Cisco IOS console or Microsoft PowerShell
   rg $argv
