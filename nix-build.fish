@@ -16,7 +16,6 @@ function nix-build
   else
     cat "$tmpFile"
     rm "$tmpFile"
-    exit 1
   end
 
 end
