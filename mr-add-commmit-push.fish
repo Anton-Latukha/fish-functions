@@ -1,9 +1,7 @@
 function mr-add-commmit-push
 
   set -l date (date --iso)
-  set -l notes ~/org
-  set -l repos $notes/journal $notes/mantra $notes
-  for repo in $repos
+  for repo in (cat ~/.config/fish/functions/git-autocommit-after-timeouts.list)
     mr -n -d $repo commit -m $date': autocommit'
   end
 
