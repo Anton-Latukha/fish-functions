@@ -11,6 +11,8 @@ function git-autocommit-after-timeouts
 
     # Attach date to beginning of message
     set -l fullMessage (date --iso)': '"$message"
+
+    # Does not commit untracked files
     # Find files that was unchanged in noted period, and commit them
     git-find-add-commit-push-after-unchanged-N-timeout "$timeout" "$fullMessage"
 
