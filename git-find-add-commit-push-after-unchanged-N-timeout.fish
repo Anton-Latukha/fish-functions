@@ -1,5 +1,7 @@
 function git-find-add-commit-push-after-unchanged-N-timeout
 
+  # Does not commit the untrached files
+
   # argv[1] - timeout in `fd` terms
   set -l timeout $argv[1]
   # argv[2] - message of commit
