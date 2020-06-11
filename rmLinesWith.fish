@@ -1,5 +1,5 @@
 function rmLinesWith
 
-  fd . --exec sed -i /"$argv"/d
+  command fd . --exec sed -i /"$argv"/d
 
 end
