@@ -10,9 +10,9 @@ function git-autocommit-after-timeouts
     cat $repoDir/.autocommit | read -l -L timeout message
 
     # Attach date to beginning of message
-    set -l fullMessage (date --iso)': '$message
+    set -l fullMessage (date --iso)': '"$message"
     # Find files that was unchanged in noted period, and commit them
-    git-find-add-commit-push-after-unchanged-N-timeout $timeout $fullMessage
+    git-find-add-commit-push-after-unchanged-N-timeout "$timeout" "$fullMessage"
 
   end
 
