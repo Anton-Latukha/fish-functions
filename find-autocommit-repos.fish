@@ -1,8 +1,11 @@
 function find-autocommit-repos
 
   # argv[1] - directory to search under
+  set -l directory $argv[1]
 
   # Find dirs containinf `.autocommit` file, and get their directory
-  dirname (command fd -H '\.autocommit' $argv[1] -x readlink -f) | sort -u
+  set -l fileList (command fd -H '\.autocommit' $directory -x readlink -f)
+
+  dirname $fileList | sort -u
 
 end
