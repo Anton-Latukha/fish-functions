@@ -8,8 +8,8 @@ function git-find-add-commit-push-after-unchanged-N-timeout
   set -l message $argv[2]
 
   # Get a list of files, concatenete lines into one string and pass the string to git add
-  git add (git-find-unchanged-uncommited-in-N-timeout "$timeout" | string join ' ')
-  git commit --untracked-files=no --message "$message"
-  git push
+  command git add (git-find-unchanged-uncommited-in-N-timeout "$timeout" | string join ' ')
+  command git commit --untracked-files=no --message "$message"
+  command git push
 
 end
