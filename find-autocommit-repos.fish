@@ -6,6 +6,6 @@ function find-autocommit-repos
   # Find dirs containinf `.autocommit` file, and get their directory
   set -l fileList (command fd -H '\.autocommit' $directory -x readlink -f)
 
-  dirname $fileList | sort -u
+  command dirname $fileList | command sort -u
 
 end
