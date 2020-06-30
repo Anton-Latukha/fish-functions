@@ -3,6 +3,7 @@ function site-publish
   set haskellNotes "$HOME"/org/haskell
   set haskellNotesCSS "$haskellNotes"/org-html-themes/styles
   set mkdocsBlog "$HOME"/src/mkdocs-blog
+  set blogStorage "$mkdocsBlog"/docs
   set mkdocsTheme "$mkdocsBlog"/mkdocs-material
   set htmlBlog "$mkdocsBlog"/Anton-Latukha.github.io
 
