@@ -25,7 +25,7 @@ function site-publish
 
   git add "$mkdocsTheme"
   git commit -m "Meta: upd smod mkdocs-material theme"
-  git add "$mkdocsBlog"/docs/haskell-notes.html
+  git add "$blogStorage"/haskell-notes.html
   git commit -m "Haskell notes: upd"
   cd "$htmlBlog"
   git add "$htmlBlog"/haskell-notes.html "$htmlBlog"/sitemap.xml "$htmlBlog"/sitemap.xml.gz
