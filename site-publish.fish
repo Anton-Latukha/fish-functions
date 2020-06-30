@@ -18,9 +18,9 @@ function site-publish
   cd "$mkdocsBlog"
   # cp -r "$haskellNotes"/Book/ "$mkdocsBlog"/docs/
   # cp -r "$haskellNotes"/Good_code/ "$mkdocsBlog"/docs/
-  cp -r "$haskellNotes"/images/ "$mkdocsBlog"/docs/
   cp "$haskellNotes"/README.html "$mkdocsBlog"/docs/haskell-notes.html
   docker run --rm -it -p 8000:8000 -v (pwd):/docs mkdocs-material build
+  cp -r "$haskellNotesImages" "$blogStorage"
 
   git add "$mkdocsTheme"
   git commit -m "Meta: upd smod mkdocs-material theme"
