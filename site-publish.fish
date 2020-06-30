@@ -5,6 +5,7 @@ function site-publish
   set mkdocsBlog "$HOME"/src/mkdocs-blog
   set blogStorage "$mkdocsBlog"/docs
   set mkdocsTheme "$mkdocsBlog"/mkdocs-material
+  set haskellNotesImages "$haskellNotes"/images
   set htmlBlog "$mkdocsBlog"/Anton-Latukha.github.io
 
   cd "$mkdocsTheme"
