@@ -21,6 +21,7 @@ function site-publish
   docker run --rm -it -p 8000:8000 -v (pwd):/docs mkdocs-material build
   cp -r "$haskellNotesImages" "$blogStorage"
   cp "$haskellNotes"/README.html "$blogStorage"/haskell-notes.html
+  cp -r "$haskellNotesCSS" "$blogStorage"
 
   git add "$mkdocsTheme"
   git commit -m "Meta: upd smod mkdocs-material theme"
