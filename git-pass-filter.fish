@@ -10,8 +10,11 @@ for pattern in $argv
 end
 
 # Remove the beginning |, no need to include the empty pattren in rg
-string trim --chars='|' "$passFilter"
+set passFilter (string trim --chars='|' "$passFilter")
 
+echo "
+PassFilter: $passFilter
+"
 
 git filter-branch --prune-empty --index-filter \
   'git ls-tree -z -r --name-only --full-tree $GIT_COMMIT | \
