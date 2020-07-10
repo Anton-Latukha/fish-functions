@@ -18,7 +18,7 @@ PassFilter: $passFilter
 
 git filter-branch --prune-empty --index-filter \
   'git ls-tree -z -r --name-only --full-tree $GIT_COMMIT | \
-  rg --null-data -v \''"$pattern"'\' | \
+  rg --null-data -v \''"$passFilter"'\' | \
   xargs -0 -r git rm --cached -r' -- --all
 
 
