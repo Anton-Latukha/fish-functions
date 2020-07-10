@@ -5,9 +5,12 @@ set passFilter ''
 # Form a `-v pattern` for `rg`
 for pattern in $argv
 
-  set passFilter = "$passFilter|$pattern"
+  set passFilter = "$passFilter|$patter"
 
 end
+
+# Remove the beginning |, no need to include the empty pattren in rg
+string trim --chars='|' "$passFilter"
 
 
 git filter-branch --prune-empty --index-filter \
