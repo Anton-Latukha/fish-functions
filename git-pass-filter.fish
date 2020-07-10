@@ -5,7 +5,7 @@ set passFilter ''
 # Form a `-v pattern` for `rg`
 for pattern in $argv
 
-  set passFilter = "$passFilter|$patter"
+  set passFilter "$passFilter|$pattern"
 
 end
 
