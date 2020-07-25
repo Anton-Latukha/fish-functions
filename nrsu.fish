@@ -8,6 +8,7 @@ function nrsu
     git commit -m "upd conf" ; \
     git push u'
   sudo -i nix-channel --update
+  sudo -i nix-channel --update nixpkgs-unstable
   sudo -i nixos-rebuild switch --upgrade $argv
 
 end
