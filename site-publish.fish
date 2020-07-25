@@ -1,7 +1,6 @@
 function site-publish
 
 # * Env
-
   set haskellNotes "$HOME"/org/haskell
   set haskellNotesCSS "$haskellNotes"/org-html-themes/styles
   set mkdocsBlog "$HOME"/src/mkdocs-blog
@@ -11,7 +10,6 @@ function site-publish
   set htmlBlog "$mkdocsBlog"/Anton-Latukha.github.io
 
 # * MkDocs theme update
-
   cd "$mkdocsTheme"
   git checkout master
   git pull u master
@@ -24,6 +22,7 @@ function site-publish
 # * Prepare mkdocs site files
 
 # ** Copy folders into mkdocs site storage
+  cd "$mkdocsBlog"
   cp --recursive --target-directory="$blogStorage" \
     "$haskellNotesImages" \
     "$haskellNotesCSS"
