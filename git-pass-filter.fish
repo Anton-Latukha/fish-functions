@@ -21,7 +21,4 @@ git filter-branch --prune-empty --index-filter \
   rg --null-data -v \''"$passFilter"'\' | \
   xargs -0 -r git rm --cached -r' -- --all
 
-# Aggresive garbage collect
-git gc --aggressive
-
 end
