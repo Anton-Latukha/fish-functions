@@ -1,6 +1,7 @@
 function emacs-autostart-plasma
 
   ## Requires user systemd service & wmctrl
-  /run/current-system/sw/bin/systemctl --user start emacs && /run/current-system/sw/bin/sleep 8 && /run/current-system/sw/bin/emacsclient -c & && /run/current-system/sw/bin/sleep 2 && /run/current-system/sw/bin/wmctrl -r 'emacs@rogue' -t 0
+  systemctl --user import-environment PATH S O H HH HB NP N XDG_RUNTIME_DIR SSH_AUTH_SOCK
+  systemctl --user start emacs && sleep 8 && command emacsclient -c & && sleep 2 && wmctrl -r 'emacs@rogue' -t 0
 
 end
