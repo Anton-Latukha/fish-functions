@@ -15,6 +15,6 @@ function less
   set -xU LESS_TERMCAP_ZO (tput ssupm)
   set -xU LESS_TERMCAP_ZW (tput rsupm)
 
-  command less $agrv
+  command less $argv
 
 end
