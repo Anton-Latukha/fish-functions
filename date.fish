@@ -1,9 +1,9 @@
 function date
 
   if count $argv > /dev/null
-    command -v date $argv
+    command date $argv
   else
-    date --iso
+    command date --iso
   end
 
 end
