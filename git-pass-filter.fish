@@ -2,7 +2,7 @@ function git-pass-filter
 
 set passFilter ''
 
-# Form a `-v pattern` for `rg`
+# Form a `-v pattern` (invert pattern) for `rg`
 for pattern in $argv
 
   set passFilter "$passFilter|$pattern"
@@ -15,10 +15,15 @@ set passFilter (string trim --chars='|' "$passFilter")
 echo "
 PassFilter: $passFilter
 "
+function delete-all-except-mentioned
 
-git filter-branch --prune-empty --index-filter \
-  'git ls-tree -z -r --name-only --full-tree $GIT_COMMIT | \
-  rg --null-data -v \''"$passFilter"'\' | \
-  xargs -0 -r git rm --cached -r' -- --all
+  git filter-branch --prune-empty --index-filter \
+    'git ls-tree -z -r --name-only --full-tree $GIT_COMMIT | \
+    rg --null-data -v \''"$passFilter"'\' | \
+    xargs -0 -r git rm --cached -r' -- --all
+
+end
+
+delete-all-except-mentioned
 
 end
